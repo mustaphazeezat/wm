@@ -1,0 +1,260 @@
+.header-wrapper
+    padding: 2rem
+    border-bottom: $border
+    a
+        display: block
+        font-size: 2rem
+        font-weight: 600
+.section-wrapper
+    width: 95%
+    max-width: 600px
+    margin: 5rem auto
+.deco-wrapper
+    padding: 3rem
+    box-shadow: $shadow
+    background: #fff
+.title-wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 1rem
+    margin-bottom: 3rem
+.add-btn
+    font-size: 1.4rem
+    color: #fff
+    padding: 1rem 1.5rem
+    background: $black
+    border-radius: 4px
+
+.input-wrapper
+    display: block
+    margin-bottom: 3rem
+    .label
+        display: block
+        font-size: 1.4rem 
+        margin-bottom: 1rem
+        &::first-letter
+            text-transform: uppercase
+    input,select
+        width: 100%
+        font-size: 1.4rem
+        outline: thin solid gray
+        padding: 1rem 1rem
+        border-radius: 4px
+    input:not(:placeholder-shown)
+        outline: thin solid 
+
+.submit-btn
+    display: block
+    width: 100%
+    max-width: 350px
+    margin: 0 auto
+    margin-top: 2.5rem
+    background: $black
+    color: #fff
+    border-radius: 4px
+    padding: 1.6rem 2rem
+    font-size: 1.6rem
+    text-transform: capitalize
+    &:hover
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px
+
+.success-msg
+    height: 350px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    text-align: center
+    padding: 1rem 2rem
+    
+    p
+        font-size: 1.5rem
+        margin-bottom: 2rem
+    a,button
+        display: inline-block
+        color: $black
+        padding: 1rem
+        font-size: 1.4rem
+        text-decoration: underline
+    a
+        
+        margin-right: 1rem
+
+
+.employee-table
+    position: relative
+    width: 100%
+    border-collapse: collapse
+    table-layout: fixed
+
+    thead
+        th
+            position: sticky
+            top: 1px
+            background-color: #fff
+            z-index: 1
+            text-transform: uppercase
+            font-size: 1.4rem
+            line-height: 1.67
+            width: 25%
+            text-align: center
+            padding: 1rem
+            &:last-child
+                text-align: center
+    tbody
+        tr
+        td
+            font-weight: 500
+            color: $black-2
+            padding: 1.5rem 0
+            text-align: center
+            border-bottom: $border
+        button
+            display: inline-block
+            padding: 1rem 1.5rem
+            border-radius: 4px
+            color: #fff
+            background: green
+            text-transform: capitalize
+
+.ReactModal__Overlay 
+    position: relative
+    inset: 0 !important
+    &--after-open
+        background: rgba(0,0 ,0,0.7 ) !important 
+        z-index: 4
+.ReactModal__Content
+    position: relative
+    width: 95%
+    max-width: 650px
+    margin: 4rem auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    inset: 0 !important
+    .close-modal-btn
+        position: absolute
+        top: 1rem
+        right: 2rem
+        padding: 1rem
+        font-weight: 600
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        border-radius: 50%
+        background: #fff 
+        text-transform: uppercase
+        color: red
+        z-index: 1
+    .modal-content
+        width: 100%
+        overflow: hidden
+        background: #fff
+        
+        h3
+            font-size: 1.6rem
+            margin-bottom: 1rem
+        
+        
+.employee-info
+    padding-bottom: 1rem
+    
+    p
+        display: inline-block
+        font-weight: 500
+        margin-bottom: 1rem
+        text-transform: capitalize
+        margin-right: 4rem
+        span
+            display: block
+            color: $black-2
+    .status-wrapper
+        display: flex
+        white-space: nowrap
+        border-radius: 4px
+        overflow: auto
+        @media (min-width: 530px)
+            display: flex
+        div
+            position: relative
+            background: #fff
+            font-size: 1.2rem
+            padding: 1.5rem 
+            text-transform: capitalize
+            border-top: 1px solid #f3f1f1
+            border-bottom: 1px solid #f3f1f1
+            &:not(:first-child)
+                padding-left: 35px
+            &:first-child
+                border-radius: 4px
+                border-left: 1px solid #f3f1f1
+                &:before
+                    right: -22px
+            &:last-child
+                border-radius: 4px
+                border-right: 1px solid #f3f1f1
+                &:after, &:before
+                    display: none
+            &:after
+                content: ""
+                position: absolute
+                right: -25px
+                bottom: -2px
+                width: 0
+                height: 0
+                border-left: 25px solid #f3f1f1
+                border-top: 25px solid transparent
+                border-bottom: 25px solid transparent
+                z-index: 2
+            &:before 
+                content: ""
+                position: absolute
+                right: -23px
+                bottom: 0
+                width: 0
+                height: 0
+                border-left: 23px solid #fff
+                border-top: 23px solid transparent
+                border-bottom: 23px solid transparent
+                z-index: 3
+            &.active
+                color: #fff
+                background: blue
+                &:before 
+                    border-left: 23px solid blue
+
+.edit-employee-info
+    position: relative
+    &.deco-wrapper
+        padding: 1.5rem 0
+    .edit-form
+            padding: 1rem
+.success-message
+    position: absolute
+    top: 1rem
+    right: 1rem
+    padding: 1rem
+    color: green
+    background: rgba(green, 0.2)
+
+        
+                
+.status
+    &.added
+        color: #000
+    &.approved
+        color: blue
+    &.in-check
+        color: purple
+    &.active
+        color: green
+    &.inactive
+        color: red
+   
+    
+            
+      
+   
